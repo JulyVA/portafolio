@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto Mono');
+@import url('https://fonts.googleapis.com/css?family=Bitter');
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+[data-theme=dark] {
+    --txt: #fff;
+    --bg: #080e14;
+    --trbg: #3e4e5ea9;
+    --contrast: #ff5277;
+    --contrast2: #c0415c;
+    --border: #575757;
+    --important: #7a53b4;
+    --trimportant: #6c2dca38;
+}
+[data-theme=light] {
+    --txt: #000000;
+    --bg: #fdfddc;
+    --trbg: #cfcfa9b6;
+    --contrast: #1e559c;
+    --contrast2: #194886;
+    --border: #575757;
+    --important: #e56121;
+    --trimportant: #e562213b;
+}
+
+body{
+    background-color: var(--bg);
+    margin: 0;
+}
+body::-webkit-scrollbar {
+    width: 10px;
+}
+body::-webkit-scrollbar-thumb {
+    background-color: var(--contrast);
+    border-radius: 5px;
+}
+body::-webkit-scrollbar-thumb:hover {
+    background-color: var(--contrast2);
+}
+
+header {
+    flex: none;
+    font-weight: bold;
+    font-family: "Roboto Mono";
+}
+
+.fixed{
+    background-color: var(--bg);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    color: var(--txt);;
+    text-align: left;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 100px;
+    padding-right: 100px;
+    border-bottom: solid var(--border);
+}
+
+.linkjv {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--txt);
+    word-spacing: 0px;
+    gap: 10px;
+}
+
+.linkjv img {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+.linkjv:hover {
+    color: var(--contrast);
+}
+
+.toggle_btn{
+    width: 74.8px;
+    height: 35.2px;
+    background-color: rgb(156, 152, 152);
+    border-radius: 22px;
+    transition: 0.5s;
+    position: relative;
+    right: 5.9px;
+    bottom: 0.88px;
+}
+.inner_circle{
+    width: 28.16px;
+    height: 28.16px;
+    background-color: var(--bg);
+    border-radius: 50%;
+    position: absolute;
+    top: 3.52px;
+    left: 4.4px;
+    transition: 0.5s;
+}
+.move{
+    left: 42.24px;
+    background-color: var(--bg);
+}
+.color{
+    background-color: #c2c2a2;
+}
+.theme-btn {
+    border: none;
+    border-radius: 22px;
+    width: 74.8px;
+    height: 35.2px;
+    position: relative;
+}
+
+
+.info {
+    display: flex;
+    gap: 30px;
+}
+.infoitem {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    text-decoration: none;
+    position: relative;
+}
+.infoitem a{
+    display: flex;
+    color: var(--txt);;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    text-decoration: none;
+}
+.infoitem a::before {
+    background: var(--trimportant);
+}
+.infoitem a::after, .infoitem a::before {
+    content: "";
+    display: block;
+    height: 6px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+.infoitem a:hover::after {
+    transform: scaleX(1);
+}
+
+.infoitem a::after {
+    background-color: var(--contrast);
+    transform: scaleX(0);
+    transform-origin: 0 50%;
+    transition: transform .5s;
+}
+
+
+
+
+
+
+
+
+.infoitem svg{
+    width: 25px;
+    height: 25px;
+    padding-right: 7px;
+}
+.pathinfo {
+    fill: var(--txt)
+}
+
+
+
+main {
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 89px auto auto;
+    color: var(--txt);
+    font-family: Bitter, sans-serif;
+}
+
+.presentation {
+    display: flex;
+    align-items:start;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 60px;
+}
+
+.fh h1{
+    margin-bottom: 0;
+    font-size: 8rem;
+    line-height: 1;
+    font-weight: 50;
+}
+.fh b{
+    font-weight: 700;
+    color: var(--important);
+}
+
+.sh h1{
+    font-family: Raleway;
+    font-size: 2rem;
+    line-height: 1.25;
+    font-weight: lighter;
+}
+
+.sh a {
+    text-decoration: none;
+    display: inline-block;
+    color: var(--txt)!important;
+    position: relative;
+}
+
+.sh a::before {
+    background-color: var(--trbg);
+}
+
+.sh a::after, .sh a::before {
+    content: "";
+    display: block;
+    height: 0.5em;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+.sh a:hover::after {
+    transform: scaleX(1);
+    
+}
+
+.sh a::after {
+    background-color: var(--contrast);
+    transform: scaleX(0);
+    transform-origin: 0 50%;
+    transition: transform .6s;
+}
+
+.th {
+    font-size: 1.7rem;
+}
