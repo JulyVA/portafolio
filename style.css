@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto Mono');
 @import url('https://fonts.googleapis.com/css?family=Bitter');
 @import url('https://fonts.googleapis.com/css?family=Raleway');
+@import url('https://fonts.googleapis.com/css?family=Nosifer');
 
 [data-theme=dark] {
     --txt: #fff;
@@ -191,6 +192,7 @@ main {
     flex-direction: column;
     justify-content: flex-start;
     padding-top: 60px;
+    gap: 2rem;
 }
 
 .fh h1{
@@ -200,29 +202,33 @@ main {
     font-weight: 50;
 }
 .fh b{
-    font-weight: 700;
+    font-weight: lighter;
+    font-size: 7rem;
     color: var(--important);
+    font-family: Nosifer;
 }
+
 
 .sh h1{
     font-family: Raleway;
     font-size: 2rem;
     line-height: 1.25;
     font-weight: lighter;
+    padding-bottom: 1rem;
 }
 
-.sh a {
+.institute-link {
     text-decoration: none;
     display: inline-block;
     color: var(--txt)!important;
     position: relative;
 }
 
-.sh a::before {
+.institute-link::before {
     background-color: var(--trbg);
 }
 
-.sh a::after, .sh a::before {
+.institute-link::after, .institute-link::before {
     content: "";
     display: block;
     height: 0.5em;
@@ -233,12 +239,12 @@ main {
     z-index: -1;
 }
 
-.sh a:hover::after {
+.institute-link:hover::after {
     transform: scaleX(1);
     
 }
 
-.sh a::after {
+.institute-link::after {
     background-color: var(--contrast);
     transform: scaleX(0);
     transform-origin: 0 50%;
@@ -247,4 +253,53 @@ main {
 
 .th {
     font-size: 1.7rem;
+    color: var(--trimportant);
+    text-decoration: none;
+}
+
+.mid {
+    padding-top: 7rem;
+}
+
+.liskills {
+    display: flex;
+    flex-wrap: wrap;
+    width: 70%;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    gap: 50px;
+    margin: 0 auto;
+}
+
+.skill-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.type-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3.5rem;
+    height: 3.5rem;
+    background-color: var(--contrast);
+    border-radius: 15%;
+}
+
+.type-item svg {
+    width: 75%;
+    height: 75%;
+    border-radius: 10%;
+}
+
+.skill-item h {
+    margin-top: 0.3rem;
+    font-size: 15px;
+}
+
+.pathskill {
+    fill: var(--bg);
 }
