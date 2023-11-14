@@ -11,7 +11,7 @@
     --contrast2: #c0415c;
     --border: #575757;
     --important: #7a53b4;
-    --trimportant: #6c2dca38;
+    --trimportant: #6c2dca50;
 }
 [data-theme=light] {
     --txt: #000000;
@@ -21,12 +21,13 @@
     --contrast2: #194886;
     --border: #575757;
     --important: #e56121;
-    --trimportant: #e562213b;
+    --trimportant: #e5622175;
 }
 
 body{
     background-color: var(--bg);
     margin: 0;
+    scroll-behavior: smooth;
 }
 body::-webkit-scrollbar {
     width: 10px;
@@ -68,7 +69,7 @@ header {
     text-decoration: none;
     color: var(--txt);
     word-spacing: 0px;
-    gap: 10px;
+    gap: 15px;
 }
 
 .linkjv img {
@@ -159,13 +160,6 @@ header {
     transition: transform .5s;
 }
 
-
-
-
-
-
-
-
 .infoitem svg{
     width: 25px;
     height: 25px;
@@ -195,13 +189,13 @@ main {
     gap: 2rem;
 }
 
-.fh h1{
+.presentation-big h1{
     margin-bottom: 0;
     font-size: 8rem;
     line-height: 1;
     font-weight: 50;
 }
-.fh b{
+.presentation-big b{
     font-weight: lighter;
     font-size: 7rem;
     color: var(--important);
@@ -209,7 +203,7 @@ main {
 }
 
 
-.sh h1{
+.presentation-small h1{
     font-family: Raleway;
     font-size: 2rem;
     line-height: 1.25;
@@ -251,20 +245,20 @@ main {
     transition: transform .6s;
 }
 
-.th {
+.presentation-readmore {
     font-size: 1.7rem;
     color: var(--trimportant);
     text-decoration: none;
 }
 
-.mid {
+.skills {
     padding-top: 7rem;
 }
 
 .liskills {
     display: flex;
     flex-wrap: wrap;
-    width: 70%;
+    width: 80%;
     align-items: center;
     justify-content: center;
     list-style: none;
@@ -302,4 +296,36 @@ main {
 
 .pathskill {
     fill: var(--bg);
+}
+
+.about {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+}
+
+.about-txt {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+}
+
+.about-txt h1 {
+    margin: 0;
+}
+
+.about-txt div {
+    text-indent: 10px;
+    font-size: 20px;
+}
+
+.about-img {
+    width: 40%;
+    display: flex;
+    justify-content: flex-end;
+}
+.about-img img {
+    width: 75%;
+    border-radius: 5px;
 }
